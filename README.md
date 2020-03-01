@@ -1,6 +1,6 @@
 # Winning solution to Visual Wake Words challenge'19 from MIT in PyTorch
 
-[Model from MIT HAN Lab](https://github.com/mit-han-lab/VWW) implemented to PyTorch.
+[Model from MIT HAN Lab](https://github.com/mit-han-lab/VWW) implemented in PyTorch.
 
 # Install
 
@@ -34,5 +34,5 @@ Optionally, you can run tests with `PYTHONPATH=. pytest` to verify that outputs 
 ### Graph visualization
 
 You can save TF graph to visualize it with TensorBoard: 
-`python visualize.py -m <path to the saved model> -s <directory to tensorboard logs>`.
-To visualize graph run: `tensorboard --logdir <`
+`python visualize.py -m <path to the saved model> -s <directory to save tensorboard logs>`.
+To visualize graph run: `tensorboard --logdir <directory to save tensorboard logs>`
