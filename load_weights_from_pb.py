@@ -12,7 +12,7 @@ from mit_vww_pytorch import MITVWW
 def parse_args():
     parser = argparse.ArgumentParser(description="Create PyTorch checkpoint from TF saved model")
     parser.add_argument('-m', '--model-filename', type=str, help='Path to the saved model',
-                        default="saved/saved_model.pb")
+                        default='model_fp32.pb')
     parser.add_argument('-s', '--save-filename', type=str, help='Path to write PyTorch checkpoint',
                         default='pytorch_mitvww.pth')
     return parser.parse_args()

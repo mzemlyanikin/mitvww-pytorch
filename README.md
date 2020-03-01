@@ -21,11 +21,13 @@ To convert the model weights you need:
 1. Download a saved model `model_fp32.pb` from [author's repository](https://github.com/mit-han-lab/VWW)
 2. Run `python load_weights_from_pb.py -m <path to the saved model>`. By default, checkpoint is saved to `mitvww_pytorch.pth`.
 
+Script will return tensors that were not initialized (only `num_batches_tracked` tensors for `BatchNorm` layers in our case. Other tensors should be initialized with TF counterparts)
+
 Script for weights conversion from TF saved model to PyTorch checkpoint should work for different models.
 To convert the model you want you need:
 
 1. Implement model in PyTorch with the same structure as TF model.
-2. Adjust TF tensors' names to match them with tensors in PyTorch model.
+2. Adjust TF tensors' names to match them with tensors in PyTorch model if needed.
 
 ### Check the equality of PyTorch and TF outputs
 
